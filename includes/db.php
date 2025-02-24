@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";  // Change if using a different host
-$user = "root";       // Database username
-$pass = "";           // Database password (set it if needed)
-$dbname = "shipment_tracker_db";  // Database name
+$user = "softsolu_track";       // Database username
+$pass = "iKtI9Gqb3o";           // Database password (set it if needed)
+$dbname = "softsolu_tracker_db";  // Database name
 
 // Create connection
 $conn = new mysqli($host, $user, $pass, $dbname);

@@ -6,7 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>
 
-    Track US0220430064NG - Nationwide Express Delivery and Security
+    Track - Worldwide Express Delivery
 
   </title>
   <meta name="description" content="">
@@ -16,31 +16,31 @@
 
 
   <!-- <link rel="manifest" href="site.webmanifest"> -->
-  <link rel="shortcut icon" type="image/x-icon"
-    href="https://www.nationwidexpressdeliverysecurity.com/static/img/favicon.ico">
+  <!-- <link rel="shortcut icon" type="image/x-icon"
+    href="https://www.nationwidexpressdeliverysecurity.com/static/img/favicon.ico"> -->
   <!-- Place favicon.ico in the root directory -->
 
 
   <!-- CSS here -->
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/magnific-popup.css">
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/themify-icons.css">
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/nice-select.css">
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/flaticon.css">
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/gijgo.css">
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/animate.css">
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/slick.css">
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/slicknav.css">
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./static/css/magnific-popup.css">
+  <link rel="stylesheet" href="./static/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./static/css/themify-icons.css">
+  <link rel="stylesheet" href="./static/css/nice-select.css">
+  <link rel="stylesheet" href="./static/css/flaticon.css">
+  <link rel="stylesheet" href="./static/css/gijgo.css">
+  <link rel="stylesheet" href="./static/css/animate.css">
+  <link rel="stylesheet" href="./static/css/slick.css">
+  <link rel="stylesheet" href="./static/css/slicknav.css">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/style.css">
-  <link href="https://www.nationwidexpressdeliverysecurity.com/static/css/jquery.contactus.min.css" rel="stylesheet"
+  <link rel="stylesheet" href="./static/css/style.css">
+  <link href="./static/css/jquery.contactus.min.css" rel="stylesheet"
     type="text/css" />
-  <link href="https://www.nationwidexpressdeliverysecurity.com/static/css/custom_navbar.css" rel="stylesheet"
+  <link href="./static/css/custom_navbar.css" rel="stylesheet"
     type="text/css" />
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/responsive.css">
+  <link rel="stylesheet" href="./static/css/responsive.css">
   <style>
     .home_header {
       color: #fff;
@@ -76,8 +76,8 @@
 
 
 
-  <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/bootstrap.min.css">
-  <link href="https://www.nationwidexpressdeliverysecurity.com/static/css/progress-wizard.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+  <link href="./static/css/progress-wizard.min.css" rel="stylesheet">
   <style>
     .marquee {
       width: 80.5%;
@@ -141,7 +141,7 @@
                     value="1Rf6b2z8Sd8xcrkxSi6WLeuiye75pTDzrajkcHDzR8S5ehLgMDyBDXcKeStjaGcS">
                   <div class="row">
                     <div class="col-md-9">
-                      <h4 class="home_header">Nationwide Express<br>Delivery and Security</h4>
+                      <h4 class="home_header">Worldwide Express<br>Delivery</h4>
                       <p class="bnr-txt">You have nothing to worry about. We help you track your consignment in real
                         time. </p>
                       <div class="input-group input-group-lgmb-3">
@@ -174,7 +174,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.27/moment-timezone-with-data.min.js"></script>
   <script type="text/javascript"
-    src="https://www.nationwidexpressdeliverysecurity.com/static/js/my_translation_text.js"></script>
+    src="./static/js/my_translation_text.js"></script>
 
   <div id="contact"></div>
 
@@ -223,46 +223,46 @@
   </div>
 
   <!-- JS here -->
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/vendor/modernizr-3.5.0.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/vendor/jquery-1.12.4.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/popper.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/bootstrap.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/owl.carousel.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/isotope.pkgd.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/ajax-form.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/waypoints.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.counterup.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/imagesloaded.pkgd.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/scrollIt.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.scrollUp.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/wow.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/nice-select.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.slicknav.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.magnific-popup.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/plugins.js"></script>
-  <!-- <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/gijgo.min.js"></script> -->
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/slick.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/custom_navbar.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.contactus.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.countdown.min.js"></script>
+  <script src="./static/js/vendor/modernizr-3.5.0.min.js"></script>
+  <script src="./static/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="./static/js/popper.min.js"></script>
+  <script src="./static/js/bootstrap.min.js"></script>
+  <script src="./static/js/owl.carousel.min.js"></script>
+  <script src="./static/js/isotope.pkgd.min.js"></script>
+  <script src="./static/js/ajax-form.js"></script>
+  <script src="./static/js/waypoints.min.js"></script>
+  <script src="./static/js/jquery.counterup.min.js"></script>
+  <script src="./static/js/imagesloaded.pkgd.min.js"></script>
+  <script src="./static/js/scrollIt.js"></script>
+  <script src="./static/js/jquery.scrollUp.min.js"></script>
+  <script src="./static/js/wow.min.js"></script>
+  <script src="./static/js/nice-select.min.js"></script>
+  <script src="./static/js/jquery.slicknav.min.js"></script>
+  <script src="./static/js/jquery.magnific-popup.min.js"></script>
+  <script src="./static/js/plugins.js"></script>
+  <!-- <script src="./static/js/gijgo.min.js"></script> -->
+  <script src="./static/js/slick.min.js"></script>
+  <script src="./static/js/custom_navbar.js"></script>
+  <script src="./static/js/jquery.contactus.min.js"></script>
+  <script src="./static/js/jquery.countdown.min.js"></script>
 
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.27/moment-timezone-with-data.min.js"></script>
   <script type="text/javascript"
-    src="https://www.nationwidexpressdeliverysecurity.com/static/js/my_translation_text.js"></script>
+    src="./static/js/my_translation_text.js"></script>
 
 
   <!--contact js-->
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/contact.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.ajaxchimp.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.form.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.validate.min.js"></script>
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/mail-script.js"></script>
+  <script src="./static/js/contact.js"></script>
+  <script src="./static/js/jquery.ajaxchimp.min.js"></script>
+  <script src="./static/js/jquery.form.js"></script>
+  <script src="./static/js/jquery.validate.min.js"></script>
+  <script src="./static/js/mail-script.js"></script>
 
 
-  <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/main.js"></script>
+  <script src="./static/js/main.js"></script>
 
   <script>
   document.getElementById("btn_search").addEventListener("click", function () {

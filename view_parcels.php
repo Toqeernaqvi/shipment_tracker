@@ -13,7 +13,7 @@ $result = $conn->query("SELECT * FROM parcels ORDER BY id DESC");
 
 <div class="container mt-4">
     <h2 class="mb-4">All Parcels</h2>
-    
+
     <table class="table table-bordered table-striped">
         <thead class="table-dark">
             <tr>
@@ -52,8 +52,8 @@ $result = $conn->query("SELECT * FROM parcels ORDER BY id DESC");
                 </td>
 
                 <td>
-                    <a href="update_parcel.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-primary">Update</a>
-                    <a href="delete_parcel.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?');">Delete</a>
+                    <a href="update_parcel.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-primary mb-2">Update</a>
+                    <a href="delete_parcel.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-danger mb-2" onclick="return confirm('Are you sure?');">Delete</a>
                     <button type="button" class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#addLocationModal" onclick="setParcelId(<?php echo $row['id']; ?>)">
                         Add Location
                     </button>
@@ -81,7 +81,7 @@ $result = $conn->query("SELECT * FROM parcels ORDER BY id DESC");
             <div class="modal-body">
                 <form id="locationForm" method="POST" action="add_location.php">
                     <input type="hidden" name="parcel_id" id="parcel_id" value="">
-                    
+
                     <div class="mb-3">
                         <label for="location" class="form-label">New Location</label>
                         <input type="text" class="form-control" id="location" name="location" required>

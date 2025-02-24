@@ -48,31 +48,31 @@ if ($tracking_id) {
 
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon"
-        href="https://www.nationwidexpressdeliverysecurity.com/static/img/favicon.ico">
+    <!-- <link rel="shortcut icon" type="image/x-icon"
+        href="https://www.nationwidexpressdeliverysecurity.com/static/img/favicon.ico"> -->
     <!-- Place favicon.ico in the root directory -->
 
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/magnific-popup.css">
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/themify-icons.css">
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/nice-select.css">
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/flaticon.css">
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/gijgo.css">
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/animate.css">
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/slick.css">
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/slicknav.css">
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./static/css/magnific-popup.css">
+    <link rel="stylesheet" href="./static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/css/themify-icons.css">
+    <link rel="stylesheet" href="./static/css/nice-select.css">
+    <link rel="stylesheet" href="./static/css/flaticon.css">
+    <link rel="stylesheet" href="./static/css/gijgo.css">
+    <link rel="stylesheet" href="./static/css/animate.css">
+    <link rel="stylesheet" href="./static/css/slick.css">
+    <link rel="stylesheet" href="./static/css/slicknav.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/style.css">
-    <link href="https://www.nationwidexpressdeliverysecurity.com/static/css/jquery.contactus.min.css" rel="stylesheet"
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link href="./static/css/jquery.contactus.min.css" rel="stylesheet"
         type="text/css" />
-    <link href="https://www.nationwidexpressdeliverysecurity.com/static/css/custom_navbar.css" rel="stylesheet"
+    <link href="./static/css/custom_navbar.css" rel="stylesheet"
         type="text/css" />
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/responsive.css">
+    <link rel="stylesheet" href="./static/css/responsive.css">
     <style>
         .home_header {
             color: #fff;
@@ -103,8 +103,8 @@ if ($tracking_id) {
 </head>
 
 <body>
-    <link rel="stylesheet" href="https://www.nationwidexpressdeliverysecurity.com/static/css/bootstrap.min.css">
-    <link href="https://www.nationwidexpressdeliverysecurity.com/static/css/progress-wizard.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+    <link href="./static/css/progress-wizard.min.css" rel="stylesheet">
     <style>
         .marquee {
             width: 80.5%;
@@ -176,177 +176,165 @@ if ($tracking_id) {
             <li class="breadcrumb-item active" aria-current="page"><?= htmlspecialchars($tracking_id) ?></li>
         </ol>
     </nav>
-    <!-- //breadcrumbs -->
-    <section>
-        <div class="container">
-
-            <div class="toast float-right" data-autohide="false">
-                <div class="toast-body">
-                    <div class="mr-auto" id="date-part">Current Date: <kbd></kbd></div>
-                    <div id="time-part">Current Time: <kbd></kbd></div>
-                </div>
-            </div>
-        </div>
-        <br><br>
-    </section>
     <br><br>
     <!-- contact -->
     <div class="container">
-        <div class="wthree_pvt_title text-center">
-            <h4 class="w3pvt-title">Parcel Details
-            </h4>
-            <p class="sub-title" id="pack_status">Your Package is on the way.</p>
-        </div>
-
-        <div class="row">
-            <h4 class="mx-auto">
-                <small><span class="spinner-grow text-primary"></span></small> Real-Time Location
-            </h4>
-            <div class="col-md-12 col-sm-12">
-                <ul class="progress-indicator custom-complex">
-                    <?php if (isset($history_result) && $history_result->num_rows > 0): ?>
-                        <?php while ($location = $history_result->fetch_assoc()): ?>
-                            <li name="route_path" details_attr="<?= htmlspecialchars($location['id']) ?>">
-                                <span class="bubble"></span> <?= htmlspecialchars($location['location']) ?>
-                                <span class="bubble"></span> <?= htmlspecialchars($location['delivered']) ?>
-
-                            </li>
-                        <?php endwhile; ?>
-                    <?php else: ?>
-                        <li><span class="bubble"></span> No tracking history available.</li>
-                    <?php endif; ?>
-
-                    <li name="route_path" details_attr="receiver_destination">
-                        <span class="bubble"></span><?= htmlspecialchars($parcel['receiver_address'] ?? 'N/A') ?>
-                    </li>
-                </ul>
-                <h5 class="text-center" id="status">Status: <?= isset($parcel['status']) ? htmlspecialchars($parcel['status']) : 'Unknown' ?></h5>
+        <?php if (isset($history_result) && $history_result->num_rows > 0): ?>
+            <div class="wthree_pvt_title text-center">
+                <h4 class="w3pvt-title">Parcel Details
+                </h4>
+                <p class="sub-title" id="pack_status">Your Package is on the way.</p>
             </div>
-        </div>
+            <div class="row">
+                <h4 class="mx-auto">
+                    <small><span class="spinner-grow text-primary"></span></small> Real-Time Location
+                </h4>
+                <div class="col-md-12 col-sm-12">
+                    <ul class="progress-indicator custom-complex">
+                        <?php if (isset($history_result) && $history_result->num_rows > 0): ?>
+                            <?php while ($location = $history_result->fetch_assoc()): ?>
+                                <li name="route_path" details_attr="<?= htmlspecialchars($location['id']) ?>"
+                                class="<?= $location['delivered'] == 1 || (isset($parcel['status']) && htmlspecialchars($parcel['status']) == "Delivered") ? 'completed' : '' ?>"
+                                >
+                                    <span class="bubble"></span> <?= htmlspecialchars($location['location']) ?>
+                                    <!-- <span class="bubble"></span> <?= htmlspecialchars($location['delivered']) ?> -->
 
+                                </li>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
 
-        <div class="row mt-4">
-            <div class="col-lg-1 col-md-1 col-sm-1"></div>
-            <div class="col-lg-10 col-md-10 col-sm-10">
-                <div class="card border border-top-0 shadow" style="border-color: #1064B3;">
-                    <div class="row">
-                        <div class="col-sm-3 col-md-3"></div>
-                        <div class="col-sm-9 col-md-9 pb-4 ml-3" style="margin-top: 1em;">
-                            <dl class="row">
-                                <dt class="col-5">Date of Arrival</dt>
-                                <dd class="col-7 pl-1"><?= htmlspecialchars($parcel['arrival_date'] ?? 'N/A') ?></dd>
-                            </dl>
-                            <dl class="row">
-                                <dt class="col-5">Estimated Time of Arrival</dt>
-                                <dd class="col-7 pl-1"><?= htmlspecialchars($parcel['estimated_time'] ?? 'N/A') ?></dd>
-                            </dl>
+                        <li name="route_path" details_attr="receiver_destination">
+                            <span class="bubble"></span><?= htmlspecialchars($parcel['receiver_address'] ?? 'N/A') ?>
+                        </li>
+                    </ul>
+                    <h5 class="text-center" id="status">Status: <?= isset($parcel['status']) ? htmlspecialchars($parcel['status']) : 'Unknown' ?></h5>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                <div class="col-lg-10 col-md-10 col-sm-10">
+                    <div class="card border border-top-0 shadow" style="border-color: #1064B3;">
+                        <div class="row">
+                            <div class="col-sm-3 col-md-3"></div>
+                            <div class="col-sm-9 col-md-9 pb-4 ml-3" style="margin-top: 1em;">
+                                <dl class="row">
+                                    <dt class="col-5">Date of Arrival</dt>
+                                    <dd class="col-7 pl-1"><?= htmlspecialchars($parcel['arrival_date'] ?? 'N/A') ?></dd>
+                                </dl>
+                                <dl class="row">
+                                    <dt class="col-5">Estimated Time of Arrival</dt>
+                                    <dd class="col-7 pl-1"><?= htmlspecialchars($parcel['estimated_time'] ?? 'N/A') ?></dd>
+                                </dl>
 
+                                <div class="row">
+                                    <div class="col-sm-5 col-md-5 col-xs-12">
+                                        <button class="btn btn-info btn-sm" data-toggle="collapse" data-target="#more_info">View More Information</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="more_info" class="collapse">
+                            <hr>
+                            <!-- Sender's Information -->
                             <div class="row">
-                                <div class="col-sm-5 col-md-5 col-xs-12">
-                                    <button class="btn btn-info btn-sm" data-toggle="collapse" data-target="#more_info">View More Information</button>
+                                <div class="col-sm-1 col-md-1"></div>
+                                <div class="col-sm-10 col-md-10 ml-3">
+                                    <h6 class="collapse-header">
+                                        <span class="badge badge-secondary">Sender's Information</span>
+                                    </h6>
+                                    <br>
+                                    <div class="card-text">
+                                        <dl class="row">
+                                            <dt class="col-4">Full Name</dt>
+                                            <dd class="col-8"><?= htmlspecialchars($parcel['sender_name'] ?? 'N/A') ?></dd>
+                                        </dl>
+                                        <dl class="row">
+                                            <dt class="col-4">Phone Number</dt>
+                                            <dd class="col-8"><?= htmlspecialchars($parcel['sender_phone'] ?? 'N/A') ?></dd>
+                                        </dl>
+                                        <dl class="row">
+                                            <dt class="col-4">Country</dt>
+                                            <dd class="col-8"><?= htmlspecialchars($parcel['sender_country'] ?? 'N/A') ?></dd>
+                                        </dl>
+                                        <dl class="row">
+                                            <dt class="col-4">Address</dt>
+                                            <dd class="col-8"><?= htmlspecialchars($parcel['sender_address'] ?? 'N/A') ?></dd>
+                                        </dl>
+                                    </div>
                                 </div>
+                                <div class="col-sm-1 col-md-1"></div>
                             </div>
-                        </div>
-                    </div>
-                    <div id="more_info" class="collapse">
-                        <hr>
-                        <!-- Sender's Information -->
-                        <div class="row">
-                            <div class="col-sm-1 col-md-1"></div>
-                            <div class="col-sm-10 col-md-10 ml-3">
-                                <h6 class="collapse-header">
-                                    <span class="badge badge-secondary">Sender's Information</span>
-                                </h6>
-                                <br>
-                                <div class="card-text">
-                                    <dl class="row">
-                                        <dt class="col-4">Full Name</dt>
-                                        <dd class="col-8"><?= htmlspecialchars($parcel['sender_name'] ?? 'N/A') ?></dd>
-                                    </dl>
-                                    <dl class="row">
-                                        <dt class="col-4">Phone Number</dt>
-                                        <dd class="col-8"><?= htmlspecialchars($parcel['sender_phone'] ?? 'N/A') ?></dd>
-                                    </dl>
-                                    <dl class="row">
-                                        <dt class="col-4">Country</dt>
-                                        <dd class="col-8"><?= htmlspecialchars($parcel['sender_country'] ?? 'N/A') ?></dd>
-                                    </dl>
-                                    <dl class="row">
-                                        <dt class="col-4">Address</dt>
-                                        <dd class="col-8"><?= htmlspecialchars($parcel['sender_address'] ?? 'N/A') ?></dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-sm-1 col-md-1"></div>
-                        </div>
 
-                        <hr>
-                        <!-- Receiver's Information -->
-                        <div class="row">
-                            <div class="col-sm-1 col-md-1"></div>
-                            <div class="col-sm-10 col-md-10 ml-3">
-                                <h6 class="collapse-header">
-                                    <span class="badge badge-secondary">Receiver's Information</span>
-                                </h6>
-                                <br>
-                                <div class="card-text">
-                                    <dl class="row">
-                                        <dt class="col-4">Full Name</dt>
-                                        <dd class="col-8"><?= htmlspecialchars($parcel['receiver_name'] ?? 'N/A') ?></dd>
-                                    </dl>
-                                    <dl class="row">
-                                        <dt class="col-4">Phone Number</dt>
-                                        <dd class="col-8"><?= htmlspecialchars($parcel['receiver_phone'] ?? 'N/A') ?></dd>
-                                    </dl>
-                                    <dl class="row">
-                                        <dt class="col-4">Country</dt>
-                                        <dd class="col-8"><?= htmlspecialchars($parcel['receiver_country'] ?? 'N/A') ?></dd>
-                                    </dl>
-                                    <dl class="row">
-                                        <dt class="col-4">Address</dt>
-                                        <dd class="col-8"><?= htmlspecialchars($parcel['receiver_address'] ?? 'N/A') ?></dd>
-                                    </dl>
+                            <hr>
+                            <!-- Receiver's Information -->
+                            <div class="row">
+                                <div class="col-sm-1 col-md-1"></div>
+                                <div class="col-sm-10 col-md-10 ml-3">
+                                    <h6 class="collapse-header">
+                                        <span class="badge badge-secondary">Receiver's Information</span>
+                                    </h6>
+                                    <br>
+                                    <div class="card-text">
+                                        <dl class="row">
+                                            <dt class="col-4">Full Name</dt>
+                                            <dd class="col-8"><?= htmlspecialchars($parcel['receiver_name'] ?? 'N/A') ?></dd>
+                                        </dl>
+                                        <dl class="row">
+                                            <dt class="col-4">Phone Number</dt>
+                                            <dd class="col-8"><?= htmlspecialchars($parcel['receiver_phone'] ?? 'N/A') ?></dd>
+                                        </dl>
+                                        <dl class="row">
+                                            <dt class="col-4">Country</dt>
+                                            <dd class="col-8"><?= htmlspecialchars($parcel['receiver_country'] ?? 'N/A') ?></dd>
+                                        </dl>
+                                        <dl class="row">
+                                            <dt class="col-4">Address</dt>
+                                            <dd class="col-8"><?= htmlspecialchars($parcel['receiver_address'] ?? 'N/A') ?></dd>
+                                        </dl>
+                                    </div>
                                 </div>
+                                <div class="col-sm-1 col-md-1"></div>
                             </div>
-                            <div class="col-sm-1 col-md-1"></div>
-                        </div>
 
-                        <hr>
-                        <!-- Consignment Information -->
-                        <div class="row">
-                            <div class="col-sm-1 col-md-1"></div>
-                            <div class="col-sm-10 col-md-10 ml-3">
-                                <h6 class="collapse-header">
-                                    <span class="badge badge-secondary">Consignment Information</span>
-                                </h6>
-                                <br>
-                                <div class="card-text">
-                                    <dl class="row">
-                                        <dt class="col-4">Parcel No</dt>
-                                        <dd class="col-8"><?= htmlspecialchars($tracking_id) ?></dd>
-                                    </dl>
-                                    <dl class="row">
-                                        <dt class="col-4">Mode of Transport</dt>
-                                        <dd class="col-8"><?= htmlspecialchars($parcel['mode_of_transport'] ?? 'N/A') ?></dd>
-                                    </dl>
-                                    <dl class="row">
-                                        <dt class="col-4">Sent Date</dt>
-                                        <dd class="col-8"><?= htmlspecialchars($parcel['sent_date'] ?? 'N/A') ?></dd>
-                                    </dl>
+                            <hr>
+                            <!-- Consignment Information -->
+                            <div class="row">
+                                <div class="col-sm-1 col-md-1"></div>
+                                <div class="col-sm-10 col-md-10 ml-3">
+                                    <h6 class="collapse-header">
+                                        <span class="badge badge-secondary">Consignment Information</span>
+                                    </h6>
+                                    <br>
+                                    <div class="card-text">
+                                        <dl class="row">
+                                            <dt class="col-4">Parcel No</dt>
+                                            <dd class="col-8"><?= htmlspecialchars($tracking_id) ?></dd>
+                                        </dl>
+                                        <dl class="row">
+                                            <dt class="col-4">Mode of Transport</dt>
+                                            <dd class="col-8"><?= htmlspecialchars($parcel['mode_of_transport'] ?? 'N/A') ?></dd>
+                                        </dl>
+                                        <dl class="row">
+                                            <dt class="col-4">Sent Date</dt>
+                                            <dd class="col-8"><?= htmlspecialchars($parcel['sent_date'] ?? 'N/A') ?></dd>
+                                        </dl>
+                                    </div>
                                 </div>
+                                <div class="col-sm-1 col-md-1"></div>
                             </div>
-                            <div class="col-sm-1 col-md-1"></div>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-1 col-md-1 col-sm-1"></div>
             </div>
-            <div class="col-lg-1 col-md-1 col-sm-1"></div>
-        </div>
-
+        <?php else: ?>
+            <h1 class="bubble text-center"> No tracking history available.</h1>
+            <a class="text-center d-block mt-3" href="index.php">Go Back</a>
+        <?php endif; ?>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.27/moment-timezone-with-data.min.js"></script>
         <script type="text/javascript"
-            src="https://www.nationwidexpressdeliverysecurity.com/static/js/my_translation_text.js"></script>
+            src="./static/js/my_translation_text.js"></script>
 
 
         <div id="contact"></div>
@@ -396,46 +384,46 @@ if ($tracking_id) {
         </div>
 
         <!-- JS here -->
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/popper.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/bootstrap.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/owl.carousel.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/isotope.pkgd.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/ajax-form.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/waypoints.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.counterup.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/imagesloaded.pkgd.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/scrollIt.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.scrollUp.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/wow.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/nice-select.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.slicknav.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.magnific-popup.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/plugins.js"></script>
-        <!-- <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/gijgo.min.js"></script> -->
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/slick.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/custom_navbar.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.contactus.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.countdown.min.js"></script>
+        <script src="./static/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="./static/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./static/js/popper.min.js"></script>
+        <script src="./static/js/bootstrap.min.js"></script>
+        <script src="./static/js/owl.carousel.min.js"></script>
+        <script src="./static/js/isotope.pkgd.min.js"></script>
+        <script src="./static/js/ajax-form.js"></script>
+        <script src="./static/js/waypoints.min.js"></script>
+        <script src="./static/js/jquery.counterup.min.js"></script>
+        <script src="./static/js/imagesloaded.pkgd.min.js"></script>
+        <script src="./static/js/scrollIt.js"></script>
+        <script src="./static/js/jquery.scrollUp.min.js"></script>
+        <script src="./static/js/wow.min.js"></script>
+        <script src="./static/js/nice-select.min.js"></script>
+        <script src="./static/js/jquery.slicknav.min.js"></script>
+        <script src="./static/js/jquery.magnific-popup.min.js"></script>
+        <script src="./static/js/plugins.js"></script>
+        <!-- <script src="./static/js/gijgo.min.js"></script> -->
+        <script src="./static/js/slick.min.js"></script>
+        <script src="./static/js/custom_navbar.js"></script>
+        <script src="./static/js/jquery.contactus.min.js"></script>
+        <script src="./static/js/jquery.countdown.min.js"></script>
 
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.27/moment-timezone-with-data.min.js"></script>
         <script type="text/javascript"
-            src="https://www.nationwidexpressdeliverysecurity.com/static/js/my_translation_text.js"></script>
+            src="./static/js/my_translation_text.js"></script>
 
 
         <!--contact js-->
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/contact.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.ajaxchimp.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.form.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/jquery.validate.min.js"></script>
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/mail-script.js"></script>
+        <script src="./static/js/contact.js"></script>
+        <script src="./static/js/jquery.ajaxchimp.min.js"></script>
+        <script src="./static/js/jquery.form.js"></script>
+        <script src="./static/js/jquery.validate.min.js"></script>
+        <script src="./static/js/mail-script.js"></script>
 
 
-        <script src="https://www.nationwidexpressdeliverysecurity.com/static/js/main.js"></script>
+        <script src="./static/js/main.js"></script>
 
 
 </body>
